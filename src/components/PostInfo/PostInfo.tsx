@@ -18,13 +18,14 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           <UserInfo user={post.user} />
         </p>
       </div>
-
       <p className="PostInfo__body">{post.body}</p>
+      <hr />
       {post.comment !== undefined && post.comment.length > 0 ? (
         <CommentList comments={post.comment} />
       ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
+      ;
     </div>
   );
 };
